@@ -1,0 +1,16 @@
+{
+  "name": "alphacast-client",
+  "version": "0.0.0",
+  "description": "the alphacast client",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "author": "japannt",
+  "license": "AGPL-3.0-or-later",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0",
+    "electron": "^6.1.12"
+  }
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Security-Policy" content="script-src 'self'">
+	<link rel="stylesheet" href="./css/haven.css">
+	<title>alphacast</title>
+</head>
+
+<body>
+	<section class="window hidden" id="player-window">
+		<div class="player-bar">
+			<span id="player-bar-song-artist">Artist</span> - <span id="player-bar-song-title">Song</span>
+			<div class="flex-horiz">
+				<div class="progress-bar" id="player-bar-progress-bar"></div>
+				<span id="player-bar-song-max-time" class="margin-left-8">0:00</span>
+			</div>
+		</div>
+
+		<div class="flex-horiz full-height">
+			<div class="side-bar flex-vert">
+				<h1 class="no-margin text-center">Good evening.</h1>
+
+				<div class="flex-horiz justify-around">
+					<img class="sidebar-icon" src="./assets/icons/search.svg">
+					<img class="sidebar-icon settings-menu-button" src="./assets/icons/settings.svg">
+				</div>
+				<hr>
+				<div class="text-center">Playlists</div>
+				<div class="flex-vert">
+					<div class="flex-center-horiz playlist-entry"><img class="playlist-icon" src="./assets/icons/playlist.svg">Playlist 1</div>
+					<div class="flex-center-horiz playlist-entry"><img class="playlist-icon" src="./assets/icons/playlist.svg">Playlist 2</div>
+					<div class="flex-center-horiz playlist-entry"><img class="playlist-icon" src="./assets/icons/playlist.svg">Playlist 3</div>
+					<div class="flex-center-horiz playlist-entry"><img class="playlist-icon" src="./assets/icons/playlist.svg">Playlist 4</div>
+				</div>
+			</div>
+
+			<section class="main-content full-width">
+				<h1>Work in progress.</h1>
+			</section>
+		</div>
+	</section>
+
+	<section class="window hidden" id="loading-window">
+		<div class="flex-vert full-height full-width flex-center-horiz flex-center-vert">
+			<img src="./assets/logo.svg">
+			<h1 class="no-margin">alphacast</h1>
+			<p>Contacting instance...</p>
+			<span class="loader"></span>
+		</div>
+
+
+	</section>
+
+	<section class="window" id="welcome-window">
+		<div class="flex-vert full-height full-width flex-center-horiz flex-center-vert" id="welcome-intro">
+			<img src="./assets/logo.svg">
+			<h1 class="no-margin">alphacast</h1>
+			<p class="no-margin">A free as in freedom audio sharing app.</p>
+			<p class="no-margin"><a href="#" id="welcome-guest-mode">Continue as guest</a>, or <a href="#" id="welcome-login-box">use an account.</a></p>
+		</div>
+
+		<div class="w-options-bar full-width flex-horiz padding-4">
+			<a href="#" class="settings-menu-button">Settings</a>
+			<span>Instance: narnia</span>
+		</div>
+	</section>
+
+	<section class="popup-window hidden" id="welcome-login-window">
+		<div class="flex-vert full-height full-width flex-center-horiz flex-center-vert">
+			<div class="flex-vert popup-window-content">
+				<h1 class="no-margin">Use an account</h1>
+				<p class="no-margin">Enter your username and password.</p>
+				<input type="text" id="login-username" placeholder="Username">
+				<input type="password" id="login-password" placeholder="Password">
+				<div class="flex-center-horiz justify-around margin-top-4">
+					<button id="login-button">Log in</button>
+					<button id="login-cancel">Register</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="popup-window hidden" id="settings-window">
+		<div class="flex-vert full-height full-width flex-center-horiz flex-center-vert">
+			<div class="flex-vert popup-window-content">
+				<h1 class="no-margin">Settings</h1>
+				<div class="flex-horiz inside-right-margin-4" id="settings-tabs">
+					<button class="settings-tab-button">Appearance</button>
+					<button class="settings-tab-button">Instance</button>
+					<button class="settings-tab-button">Account</button>
+				</div>
+			
+				<div class="settings-tab" id="settings-tab-appearance">
+					<div class="flex-vert inside-bottom-margin-4">
+						<h1>Appearance</h1>
+						<input type="text" size="32" placeholder="Background URL" id="settings-appearance-bgurl">
+						<span>Background blur</span>
+						<input type="range" class="full-width" id="settings-appearance-bgblur">
+					</div>
+				</div>
+
+				<div class="settings-tab hidden" id="settings-tab-instance">
+					<h1>Instance</h1>
+				</div>
+
+				<div class="settings-tab hidden" id="settings-tab-account">
+					<p>account</p>
+				</div>
+
+				<div class="flex-horiz self-pos-end margin-top-4">
+					<button id="settings-save">Save</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="banner" id="globalBanner"></div>
+
+	<script src="./js/lib/jquery.js"></script>
+	<script src="./js/lib/sosnippets.js"></script>
+
+	<script src="./js/server-lib.js"></script>
+	<script src="./js/haven.js"></script>
+</body>
+
+</html>
